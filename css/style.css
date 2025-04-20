@@ -99,7 +99,19 @@ article p {
 }
 
 header {
-    display: none;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    height: 500;
+    width: 100%;
+    margin-bottom: var(--general-margin);
+}
+
+header img {
+    width: 100%; 
+    height: 500px; 
+    object-fit: cover; 
+    object-position: center; 
 }
 
 nav {
