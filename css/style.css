@@ -1,6 +1,7 @@
 :root {
   --grey-foreground-color-color: #e0e0e0;
   --accent-color: #d72638;
+  --accent-color-light: #2563eb;
   --general-padding: 2em;
   --general-margin: 1em;  
 }
@@ -19,6 +20,7 @@
     --light-background-color: #ffffff;     
     --dark-foreground-color: #23263a;      
     --light-foreground-color: #5a5a89;  
+    --accent-color: var(--accent-color-light);
 }
 body {
     background-color: var(--dark-background-color);
@@ -109,21 +111,20 @@ nav {
     align-items: center;
     border-top: 1px solid var(--dark-foreground-color);
     border-bottom: 1px solid var(--dark-foreground-color);
-    height: 40px;
+    height: min-height;
 }
 
 nav ul {
-    padding-left: calc(var(--general-padding) * 4);
+    padding-left: var(--general-padding);
 }
 
 nav li {
     display: inline-block;
-    width: 5em;
     margin-right: var(--general-margin);
 }
 
-/* yleinen tyyli teemavalitsin -painikkeelle */
-button, .btn-dark, .btn-light {
+nav a, button, .btn-dark, .btn-light {
+    display: inline-block;
     padding: 0.6em 1.4em;
     border: none;
     border-radius: 6px;
@@ -133,27 +134,11 @@ button, .btn-dark, .btn-light {
     cursor: pointer;
     transition: background 0.2s, color 0.2s, box-shadow 0.2s;
     box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
-    margin: 0.5em 0;
-}
-
-/* Tumma teema - painike */
-.dark-theme .btn-dark {
-    background: var(--accent-color);
-    color: var(--dark-foreground-color);
-}
-.dark-theme .btn-dark:hover {
-    background: #b71c1c;
-    color: #fff;
-}
-
-/* Vaalea teema - painike */
-.light-theme .btn-dark {
+    margin: 0.5em 0.5em 0.5em 0;
     background: var(--accent-color);
     color: #fff;
-}
-.light-theme .btn-dark:hover {
-    background: #a61b29;
-    color: #fff;
+    text-align: center;
+    text-decoration: none;
 }
 
 div#container {
