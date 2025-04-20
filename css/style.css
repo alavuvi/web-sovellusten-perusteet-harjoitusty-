@@ -99,15 +99,7 @@ article p {
 }
 
 header {
-    display: inherit;
-    justify-content: center;
-    align-items: center;
-    height: 150px;
-}
-
-header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5em; 
+    display: none;
 }
 
 nav {
@@ -130,6 +122,14 @@ nav {
 .nav-links li {
     display: inline-block;
     margin-right: var(--general-margin);
+}
+
+.nav-links img {
+    max-height: 40px;       
+    width: auto;          
+    object-fit: contain;    
+    vertical-align: middle; 
+    margin-right: 1em;      
 }
 
 nav a, button, .btn-dark, .btn-light {
