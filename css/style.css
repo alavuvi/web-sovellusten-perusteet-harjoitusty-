@@ -1,20 +1,35 @@
 :root {
-  --dark-background-color: #333;
-  --light-background-color: #f5f5f5;
-  --dark-foreground-color: #000;
-  --light-foreground-color: #fff;
-  --grey-foreground-color-color: #ccc;
-  --accent-color: #6d0509;
+  --grey-foreground-color-color: #e0e0e0;
+  --accent-color: #d72638;
   --general-padding: 2em;
   --general-margin: 1em;  
 }
 
+/* Tumma teema */
+.dark-theme {
+    --dark-background-color: #181824;      
+    --light-background-color: #23263a;     
+    --dark-foreground-color: #f5f6fa;      
+    --light-foreground-color: #bfc7d5;    
+}
+
+/* Vaalea teema */
+.light-theme {
+    --dark-background-color: #f4f4f7;      
+    --light-background-color: #ffffff;     
+    --dark-foreground-color: #23263a;      
+    --light-foreground-color: #5a5a89;  
+}
+body {
+    background-color: var(--dark-background-color);
+}
 * {
     margin: 0;
     padding: 0;
     color: var(--dark-foreground-color);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 *,*::before,*::after {
     box-sizing: border-box;
 }
@@ -32,6 +47,7 @@ div#container {
     display: flex;
     flex-direction: column;
     margin: var(--general-margin);
+    background-color: var(--light-background-color);
 }
 
 div#content {
@@ -47,12 +63,16 @@ div#content section {
     margin: calc(var(--general-margin) * 2) 0 var(--general-margin) 0;
 }
 
+div#content section section {
+    border-right: none;
+}
+
 div#content aside {
-    width: 20vw;
+    width: 60vw;
 }
 
 article {
-    flex: 33.33%;
+    flex: 100%;
 }
 
 article div {
@@ -61,6 +81,8 @@ article div {
 }
 
 article h3 {
+    font-family: 'playfair display', serif;
+    font-size: 1.8em;
     margin: var(--general-margin);
 }
 
@@ -78,7 +100,8 @@ header {
 }
 
 header h1 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em; /* Voit säätää kokoa tarpeen mukaan */
 }
 
 nav {
@@ -97,6 +120,40 @@ nav li {
     display: inline-block;
     width: 5em;
     margin-right: var(--general-margin);
+}
+
+/* yleinen tyyli teemavalitsin -painikkeelle */
+button, .btn-dark, .btn-light {
+    padding: 0.6em 1.4em;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
+    margin: 0.5em 0;
+}
+
+/* Tumma teema - painike */
+.dark-theme .btn-dark {
+    background: var(--accent-color);
+    color: var(--dark-foreground-color);
+}
+.dark-theme .btn-dark:hover {
+    background: #b71c1c;
+    color: #fff;
+}
+
+/* Vaalea teema - painike */
+.light-theme .btn-dark {
+    background: var(--accent-color);
+    color: #fff;
+}
+.light-theme .btn-dark:hover {
+    background: #a61b29;
+    color: #fff;
 }
 
 div#container {
