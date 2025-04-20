@@ -53,7 +53,8 @@ div#container {
 }
 
 div#content {
-    display: inherit;
+    display: flex;
+    gap: 1em;
 }
 
 div#content section {
@@ -61,8 +62,7 @@ div#content section {
     display: inherit;
     flex-direction: row;
     flex-wrap: wrap;
-    border-right: 1px solid var(--dark-foreground-color);
-    margin: calc(var(--general-margin) * 2) 0 var(--general-margin) 0;
+    margin: 0 0 var(--general-margin) 0; 
 }
 
 div#content section section {
@@ -75,11 +75,12 @@ div#content aside {
 
 article {
     flex: 100%;
-}
-
-article div {
     margin: var(--general-margin);
     border: 1px solid var(--grey-foreground-color-color);
+    border-radius: 16px;
+    background: var(--light-background-color);
+    margin-top: var(--general-margin);
+    margin-bottom: var(--general-margin);
 }
 
 article h3 {
@@ -112,7 +113,7 @@ nav {
     justify-content: space-between;
     border-top: 1px solid var(--dark-foreground-color);
     border-bottom: 1px solid var(--dark-foreground-color);
-    height: min-height;
+    margin-bottom: var(--general-margin);
 }
 
 .nav-links ul {
@@ -169,6 +170,11 @@ div#container {
 aside {
     padding: var(--general-padding);
     padding-top: calc(var(--general-padding) * 1.5);
+    border: 1px solid var(--grey-foreground-color-color);
+    border-radius: 16px;
+    background: var(--light-background-color);
+    margin-top: var(--general-margin);
+    margin-bottom: var(--general-margin);
 }
 
 footer {
