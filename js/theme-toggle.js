@@ -1,4 +1,5 @@
-document.getElementById("theme-toggle").addEventListener("click", function() {
+const btn = document.getElementById("theme-toggle");
+btn.addEventListener("click", function() {
     const body = document.body;
 
     // teema vaihdetaan lisäämällä tai poistomalla luokkia
