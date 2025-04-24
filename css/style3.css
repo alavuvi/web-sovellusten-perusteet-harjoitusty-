@@ -107,44 +107,10 @@
       line-height: 1.5;
   }
 
-  /* TECH STACK TYYLIT */
-.tech-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1.5em;
-    margin: var(--general-margin);
-}
-
-.tech-category h4 {
-    font-family: 'playfair display', serif;
-    font-size: 1.2em;
-    margin-bottom: 0.5em;
-    color: var(--accent-color);
-}
-
-.tech-category ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.tech-category li {
-    padding: 0.3em 0;
-    font-size: 0.95em;
-    color: var(--light-foreground-color);
-}
-
-.tech-category li::before {
-    content: "• ";
-    color: var(--accent-color);
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-}
-
-aside {
+  
+  
+  aside {
     padding: var(--general-padding);
-    align-self: flex-start; 
-    height: auto; 
 }
 
   aside h3 {
@@ -153,6 +119,7 @@ aside {
     margin: var(--general-margin);
 }
   
+
   /* LOMAKETYYLIT */
 .contact-form {
     display: flex;
@@ -199,7 +166,7 @@ aside {
     align-self: flex-start;
 }
 
-/* Lomakkeelle korjaukset tummalle teemalle */
+/* Lomakkeella korjaukset tummalle teemalle */
 .dark-theme .contact-form input,
 .dark-theme .contact-form textarea {
     background-color: #242736;

@@ -1,11 +1,9 @@
-/* MUUTTUJAT JA PERUSASETUKSET */
 :root {
-    --grey-foreground-color: #e0e0e0;
+    --grey-foreground-color-color: #e0e0e0;
     --accent-color: #d72638;
     --accent-color-light: #2563eb;
     --general-padding: 0.5em;
-    --general-margin: 1em;
-    --text-color-light: #ffffff;  
+    --general-margin: 1em;  
   }
   
   /* Tumma teema */
@@ -24,8 +22,9 @@
       --light-foreground-color: #5a5a89;  
       --accent-color: var(--accent-color-light);
   }
-  
-  /* RESET JA YLEISET TYYLIT */
+  body {
+      background-color: var(--dark-background-color);
+  }
   * {
       margin: 0;
       padding: 0;
@@ -37,20 +36,15 @@
       box-sizing: border-box;
   }
   
-  body {
-      background-color: var(--dark-background-color);
-  }
-  
   a {
       text-decoration: none;
   }
   
   a:hover {
-      color: var(--accent-color);
-     
+      color:var(--accent-color);
+      font-weight:bold;
   }
   
-  /* LAYOUT KOMPONENTIT */
   div#container {
       display: flex;
       flex-direction: column;
@@ -84,16 +78,13 @@
       max-width: 100%;
   }
   
-  /* ARTIKKELIT JA SISÄLTÖELEMENTIT */
-  article, aside {
-      border-radius: 16px;
-      margin: var(--general-margin) 0;
-      border: 1px solid var(--grey-foreground-color);
-      background: var(--light-background-color);
-  }
-  
   article {
       flex: 100%;
+      margin: var(--general-margin);
+      border: 1px solid var(--grey-foreground-color-color);
+      background: var(--light-background-color);
+      margin-top: var(--general-margin);
+      margin-bottom: var(--general-margin);
   }
   
   article h3 {
@@ -106,112 +97,12 @@
       margin: var(--general-margin);
       line-height: 1.5;
   }
-
-  /* TECH STACK TYYLIT */
-.tech-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1.5em;
-    margin: var(--general-margin);
-}
-
-.tech-category h4 {
-    font-family: 'playfair display', serif;
-    font-size: 1.2em;
-    margin-bottom: 0.5em;
-    color: var(--accent-color);
-}
-
-.tech-category ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.tech-category li {
-    padding: 0.3em 0;
-    font-size: 0.95em;
-    color: var(--light-foreground-color);
-}
-
-.tech-category li::before {
-    content: "• ";
-    color: var(--accent-color);
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-}
-
-aside {
-    padding: var(--general-padding);
-    align-self: flex-start; 
-    height: auto; 
-}
-
-  aside h3 {
-    font-family: 'playfair display', serif;
-    font-size: 1.8em;
-    margin: var(--general-margin);
-}
   
-  /* LOMAKETYYLIT */
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-}
-
-.contact-form label {
-    font-size: 1em;
-    font-weight: 600;
-    color: var(--light-foreground-color);
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 1em;
-    border-radius: 6px;
-    border: 1px solid var(--grey-foreground-color);
-    background-color: var(--dark-background-color);
-    color: var(--dark-foreground-color);
-    font-size: 1em;
-    transition: all 0.2s;
-}
-
-.contact-form textarea {
-    min-height: 120px;
-    resize: vertical;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: var(--accent-color);
-    box-shadow: 0 0 0 2px rgba(215, 38, 56, 0.2);
-}
-
-.contact-form button {
-    align-self: flex-start;
-}
-
-/* Lomakkeelle korjaukset tummalle teemalle */
-.dark-theme .contact-form input,
-.dark-theme .contact-form textarea {
-    background-color: #242736;
-    border-color: #3a3e52;
-}
-  
-  /* HEADER JA NAVIGAATIO */
   header {
       display: flex;
       justify-content: center;
       overflow: hidden;
-      height: 500px;
+      height: 500;
       width: 100%;
       margin-bottom: var(--general-margin);
   }
@@ -233,7 +124,6 @@ aside {
       padding: 0.2em var(--general-padding);
   }
   
-  /* NAVIGAATION LINKIT */
   .nav-links ul {
       display: flex;
       align-items: center;
@@ -246,16 +136,6 @@ aside {
       margin-right: var(--general-margin);
   }
   
-  .nav-links a {
-      color: var(--dark-foreground-color);
-      text-decoration: none;
-      transition: color 0.2s;
-  }
-  
-  .nav-links a:hover {
-      color: var(--accent-color);
-  }
-  
   .nav-links img {
       max-height: 40px;       
       width: auto;          
@@ -264,7 +144,6 @@ aside {
       margin-right: 1em;      
   }
   
-  /* PAINIKKEET JA TOIMINNALLISUUSKOMPONENTIT */
   button, .btn-dark, .btn-light {
       display: inline-block;
       padding: 0.4em 1.2em;
@@ -278,7 +157,7 @@ aside {
       box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
       margin: 0.3em 0.5em 0.3em 0;
       background: var(--accent-color);
-      color: var(--text-color-light);
+      color: #fff;
       text-align: center;
       text-decoration: none;
   }
@@ -291,22 +170,44 @@ aside {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0.3em;
-      background: var(--accent-color);
+      margin: 0.3em;    
   }
   
   #theme-toggle svg {
       width: 100%;          
       height: 100%;
-      stroke: var(--text-color-light);
+      stroke: white;
   }
   
   #theme-toggle:hover {
-      background: var(--grey-foreground-color);
+      background: var(--grey-foreground-color-color);
       color: var(--accent-color);
   }
   
-  /* FOOTER */
+  div#container {
+      display: flex;
+      flex-direction: column;
+      background-color: var(--light-background-color);
+      padding: var(--general-padding);
+  }
+  
+  /* Yhteneväiset marginaalit article ja aside */
+  article,aside {
+      border-radius: 16px;
+      margin-top: var(--general-margin);
+      margin-bottom: var(--general-margin);
+      margin-left: 0;
+      margin-right: 0;
+  }
+  
+  aside {
+      padding: var(--general-padding);
+      padding-top: calc(var(--general-padding) * 1.5);
+      border: 1px solid var(--grey-foreground-color-color);
+  
+      background: var(--light-background-color);
+  }
+  
   footer {
       background-color: var(--dark-background-color);
       display: flex; 
@@ -321,7 +222,6 @@ aside {
       color: var(--light-foreground-color);
   }
   
-  /* MEDIAKYSELYT */
   @media only screen and (max-width: 1200px) {
       div#content {
           flex-direction: column;
