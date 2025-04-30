@@ -31,12 +31,17 @@
     padding: 0;
     color: var(--dark-foreground-color);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+   
 }
 
 *,
 *::before,
 *::after {
     box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll;
 }
 
 body {
