@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <title>Electricity Prices - Ville-Pekka Alavuotunki</title>
+</head>
+
+<body class="dark-theme">
+    <nav>
+        <div class="nav-links">
+            <ul>
+                <li><img src="./images/logo.jpg"></li>
+                <li><a href="./index.html">Home</a></li> 
+                <li><a href="#">Projects</a></li>
+                <li><a href="./electricity.html">Electricity Price Now</a></li>
+            </ul>
+        </div>
+        <button id="theme-toggle" class="btn-dark" aria-label="switch theme">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+            </svg>
+        </button>
+    </nav>
+    <div id="container">
+        <header>
+            <img src="/images/banner2.jpg">
+        </header>
+        <div id="content">
+            <section id="main">
+                <article>
+                    <div id="price-display">
+                        <div class="price">
+                            <h4>Current Electricity SPOT Price in Finland</h4>
+                            <p id="current-price">Loading...</p>
+                            <p id="current-date-time"></p>
+                            <p>
+                                The displayed electricity spot price is the raw market price (c/kWh) and does not
+                                include VAT, electricity transmission fees, or any additional supplier margins. The
+                                final price on your electricity bill will be higher.
+                            </p>
+                        </div>
+                </article>
+            </section>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Ville-Pekka Alavuotunki</p>
+    </footer>
+    <script src="./js/index.js"></script>
+    <script src="./js/electricity.js"></script>
+</body>
+
+</html>

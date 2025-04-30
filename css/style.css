@@ -330,6 +330,29 @@ footer p {
     color: var(--light-foreground-color);
 }
 
+/* SÄHKÖHINTA-OSION TYYLIT */
+#price-display {
+    padding: 2em 1.5em;
+    margin: 2em 0;
+    text-align: center;
+}
+.price h4 {
+    color: var(--accent-color);
+    font-size: 1.5em;
+}
+
+#current-price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00e676;
+}
+
+.price p {
+    color: var(--light-foreground-color);
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
 /* MEDIAKYSELYT */
 @media only screen and (max-width: 1200px) {
     div#content {
