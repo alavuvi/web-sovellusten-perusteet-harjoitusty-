@@ -262,6 +262,7 @@ nav {
     color: var(--dark-foreground-color);
     text-decoration: none;
     transition: color 0.2s;
+    font-weight: bold;
 }
 
 .nav-links a:hover {
