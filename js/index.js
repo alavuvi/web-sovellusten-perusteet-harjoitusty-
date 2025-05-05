@@ -27,3 +27,30 @@ btn.addEventListener("click",() => {
         localStorage.setItem('theme', 'dark-theme')
     }
 })
+
+// Yhtedenottolomake, virheenkäsittely ja nollaus onnistuneen lähetyksen jälkeen
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector('.contact-form')
+    if (form) {
+        form.addEventListener('submit', function(event) {
+            event.preventDefault()
+            const data = new FormData(form)
+            fetch(form.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    form.reset()
+                    alert("Thank you for your message!")
+                } else {
+                    alert("There was a problem sending your message.")
+                }
+            }).catch(() => {
+                alert("There was a problem sending your message.")
+            })
+        })
+    }
+})
