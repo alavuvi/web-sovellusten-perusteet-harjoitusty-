@@ -30,8 +30,7 @@
     margin: 0;
     padding: 0;
     color: var(--dark-foreground-color);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-   
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
 }
 
 *,
@@ -191,7 +190,6 @@ aside h3 {
     background-color: var(--dark-background-color);
     color: var(--dark-foreground-color);
     font-size: 1em;
-    transition: all 0.2s;
 }
 
 .contact-form textarea {
