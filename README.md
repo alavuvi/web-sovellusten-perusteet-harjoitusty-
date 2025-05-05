@@ -5,6 +5,8 @@ Harjoitustyössä tarkoituksena oli luoda Oulun ammattikorkeakoulun Web-sovellus
 Sivuston pääsivulla on hieman esittelyä minusta ja teknologioista, joihin olen tutustunut opintojen / harrastusten kautta. 
 Pääsivun oikeassa laidassa on asideen toteutettu yhteydenottolomake, johon käytin apuna formspreen ilmaisversiota. Tällä saa 50 lomakelähetystä per kuukausi, mikä on varmasti riittävästi tämänkaltaiseen sivustoon. 
 
+Sivusto löytyy osoitteesta: https://alavuvi.github.io/web-sovellusten-perusteet-harjoitusty-/
+
 Yleisesti sivusto on suunniteltu responsiiviseksi käyttämällä CSS -tyylimäärityksiä ja media queryitä. Aside siirtyy esim. puhelimella selatessa luonnollisesti artikkelikenttien alle viimeiseksi. 
 
 Sivustolle on toteutettu teemavalitsin JavaScriptillä, joka tallentaa valitun teeman localstorageen. Joten teemavalinta on käytössä myös sivuvaihdon yhteydessä.  
@@ -12,6 +14,7 @@ Sivustolle on toteutettu teemavalitsin JavaScriptillä, joka tallentaa valitun t
 ![Yleiskuva](./readme_kuvat/main.png)
 
 Bannerikuva löytyy osoitteesta: https://pixabay.com/illustrations/web-design-webdesign-web-design-1668927/
+
 
 ## Sähkönhinta -sovellus
 Sivustolle tein harjoitusmuodossa sähkönpörssihinnan näyttämiseen oman sivun. Sivustolla näkyy kyseisen tunnin mukainen verollinen sähkönpörssihinta. Tiedot haetaan: https://porssisahko.net/api -osoitteesta ja ohjelmakoodi on toteutettu JavaScriptillä. Sovellus tekee fetch pyynnön rajapintaan ja noudattaa virheidenhallinnassa try-catch -rakennetta. Jos vastausta ei rajapinnasta kuulu, niin tästä ilmoitetaan käyttäjälle. Tästä sovelluksesta saisi huomattavasti käytännöllisemmän lisäämällä backendin. Tämä API on avoin, joten ei ole tarvetta erilliselle API avaimelle.
