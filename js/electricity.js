@@ -16,7 +16,7 @@ const spot = async() => {
             alert("Error getting data")
         }
     } catch (error) {
-        alert('Haku epäonnistui: ' + error)
+        alert('Error getting data: ' + error)
     }
 }
 
