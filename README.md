@@ -1,4 +1,4 @@
-# Web-sovellusten Perusteet -harjoitustyö
+# Web-sovellusten perusteet -harjoitustyö
 Harjoitustyössä tarkoituksena oli luoda Oulun ammattikorkeakoulun Web-sovellusten perusteet-opintojaksolla käytetyillä teknologioilla: HTML, CSS ja Javascript jokin mielekäs sovellus. Aiheen valinta osoittautui tehtävää aloittaessa ehkä haasteellisimmaksi, joten päädyin lopulta tekemään omat kotisivuni, eli ns. portfolio-sivut, jonne lisään toiminnallisuuksia harjoituksen vaatimusten mukaisesti.
 
 ## Sivuston yleiset ominaisuudet
